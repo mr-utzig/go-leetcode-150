@@ -4,13 +4,11 @@ package remove_duplicates_from_sorted_array_ii
 //
 //	Input: nums = [1,1,1,2,2,3]
 //	Output: 5, nums = [1,1,2,2,3,_]
-var Nums1 = []int{1, 1, 1, 2, 2, 3}
 
 // Example 2:
 //
 //	Input: nums = [0,0,1,1,1,1,2,3,3]
 //	Output: 7, nums = [0,0,1,1,2,3,3,_,_]
-var Nums2 = []int{0, 0, 1, 1, 1, 1, 2, 3, 3}
 
 func Algorithm(nums []int) int {
 	for i := 0; i < len(nums); {

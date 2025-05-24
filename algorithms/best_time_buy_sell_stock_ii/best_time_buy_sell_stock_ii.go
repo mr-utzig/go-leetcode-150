@@ -3,17 +3,14 @@ package best_time_buy_sell_stock_ii
 // Example 1:
 // Input: prices = [7,1,5,3,6,4]
 // Output: 7
-var Prices1 = []int{7, 1, 5, 3, 6, 4}
 
 // Example 2:
 // Input: prices = [1,2,3,4,5]
 // Output: 4
-var Prices2 = []int{1, 2, 3, 4, 5}
 
 // Example 3:
 // Input: prices = [7,6,4,3,1]
 // Output: 0
-var Prices3 = []int{7, 6, 4, 3, 1}
 
 func Algorithm(prices []int) int {
 	profit := 0

@@ -1,29 +1,39 @@
 package best_time_buy_sell_stock_ii
 
-import "testing"
+import (
+	"testing"
+)
 
-func TestPrices1(t *testing.T) {
-	res := Algorithm(Prices1)
-
-	if res != 7 {
-		t.Errorf(`Algorithm(%v) = %v, expected 7`, Prices1, res)
+func TestAlgorithm(t *testing.T) {
+	type args struct {
+		prices []int
 	}
-}
-
-func TestPrices2(t *testing.T) {
-	res := Algorithm(Prices2)
-
-	if res != 4 {
-		t.Errorf(`Algorithm(%v) = %v, expected 4`, Prices2, res)
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{
+			name: "Example 1",
+			args: args{prices: []int{7, 1, 5, 3, 6, 4}},
+			want: 7,
+		},
+		{
+			name: "Example 2",
+			args: args{prices: []int{1, 2, 3, 4, 5}},
+			want: 4,
+		},
+		{
+			name: "Example 3",
+			args: args{prices: []int{7, 6, 4, 3, 1}},
+			want: 0,
+		},
 	}
-
-}
-
-func TestPrices3(t *testing.T) {
-	res := Algorithm(Prices3)
-
-	if res != 0 {
-		t.Errorf(`Algorithm(%v) = %v, expected 0`, Prices3, res)
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := Algorithm(tt.args.prices); got != tt.want {
+				t.Errorf("Algorithm() = %v, want %v", got, tt.want)
+			}
+		})
 	}
-
 }

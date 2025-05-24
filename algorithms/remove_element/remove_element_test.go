@@ -1,12 +1,11 @@
-package best_time_buy_sell_stock
+package remove_element
 
-import (
-	"testing"
-)
+import "testing"
 
 func TestAlgorithm(t *testing.T) {
 	type args struct {
-		prices []int
+		nums []int
+		val  int
 	}
 	tests := []struct {
 		name string
@@ -15,18 +14,24 @@ func TestAlgorithm(t *testing.T) {
 	}{
 		{
 			name: "Example 1",
-			args: args{prices: []int{7, 1, 5, 3, 6, 4}},
-			want: 5,
+			args: args{
+				nums: []int{3, 2, 2, 3},
+				val:  3,
+			},
+			want: 2,
 		},
 		{
 			name: "Example 2",
-			args: args{prices: []int{7, 6, 4, 3, 1}},
-			want: 0,
+			args: args{
+				nums: []int{0, 1, 2, 2, 3, 0, 4, 2},
+				val:  2,
+			},
+			want: 5,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Algorithm(tt.args.prices); got != tt.want {
+			if got := Algorithm(tt.args.nums, tt.args.val); got != tt.want {
 				t.Errorf("Algorithm() = %v, want %v", got, tt.want)
 			}
 		})

@@ -4,13 +4,11 @@ package best_time_buy_sell_stock
 //
 //	Input: prices = [7,1,5,3,6,4]
 //	Output: 5
-var Prices1 = []int{7, 1, 5, 3, 6, 4}
 
 // Example 2:
 //
 //	Input: prices = [7,6,4,3,1]
 //	Output: 0
-var Prices2 = []int{7, 6, 4, 3, 1}
 
 func Algorithm(prices []int) int {
 	cheapest := prices[0]
